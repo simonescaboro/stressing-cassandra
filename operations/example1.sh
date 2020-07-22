@@ -1,7 +1,8 @@
+#!/bin/sh
 ccm stress \
-    user profile=$1 \
+    user profile=../examples/stress-example.yaml \
     n=1000 \
     ops\(read1=3\) \
     no-warmup \
-    cl=$2 \
-    -log  file=logs/log_$2/log_$2_$3_$(date +'%s').log no-summary
+    cl=$1 \
+    -log  file=logs/log_$1/log_$1_$2_$(date +'%s').log no-summary
