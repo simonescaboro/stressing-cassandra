@@ -1,6 +1,6 @@
 # stressing-cassandra
 ## Installation
-In order to use this scripts, you must install ccm (Cassandra Cluster Manager). A useful guide might be [this](https://academy.datastax.com/planet-cassandra/getting-started-with-ccm-cassandra-cluster-manager).
+In order to use these scripts, you have to install ccm (Cassandra Cluster Manager). A useful guide can he found [here](https://academy.datastax.com/planet-cassandra/getting-started-with-ccm-cassandra-cluster-manager).
 After installing ccm, clone this repositoy into ccm directory.
 ## Execution
 `init-cluster.sh` helps you to initialize a cluster. Use `-h`parameter to find out the necessary parameters.
@@ -18,4 +18,4 @@ The first argument of `stress-test-ccm.sh` might be `None` if `stress-query-file
 ## Stress results
 The results will be saved in *logs* folder. For each consistency level there is a separate subfolder (log_ONE, log_TWO, log_QUORUM, log_ALL).
 
-In order to not delete the log files of past tests, each log file name has this format: `log_n_TIMESTAMP.log`, where *n* is the number of iteration, and *TIMESTAMP* is the operation timestamp (to approximatly distinguish each test iteration).
+In order to not delete the log files of past tests, each log file name has this format: `log_n_TIMESTAMP.log`, where *n* is the iteration number, and *TIMESTAMP* is the operation timestamp (to approximatly distinguish each test).
