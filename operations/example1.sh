@@ -1,6 +1,6 @@
 #!/bin/sh
 ccm stress \
-    user profile=.operations/test_profiles/stress-example.yaml \
+    user profile=./operations/test_profiles/stress-example.yaml \
     n=1000 \
     ops\(read1=3\) \
     no-warmup \
