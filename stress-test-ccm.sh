@@ -1,11 +1,11 @@
 if [ -z "$1" ]
     then
-        echo "No file path given: use \"None\" when stressing via write/read (instead of user) operations."
+        echo "No file path given: use \"None\" when stressing via write/read (instead of user) operations.\n"
         exit
 fi
 if [ -z "$2" ]
     then
-        echo "Missing number of iteration"
+        echo "Missing number of iteration\n"
         exit 
 fi
 

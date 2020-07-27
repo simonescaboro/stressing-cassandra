@@ -1,14 +1,14 @@
-#!/bin/sh
+
 N_NODES=0;
 DEFF_VALUE=0;
 
 function printHelp {
-    echo "\nIn order to create a new cluster, you must use these two parameters at the same time:"
-    echo "\t-n=<number of nodes> | --nodes=<number of nodes>"
-    echo "\t-s=<cluster name> | --start=<cluster name>"
-    echo "To delete the entire cluster use:"
-    echo "\t-d=<cluster name> | --delete=<cluster name>"
-    echo "To manage the cluster (remove single nodes, execute cql queries, etc), use ccm commands directly.\n"
+    printf "\nIn order to create a new cluster, you must use these two parameters at the same time:\n"
+    printf "\t-n=<number of nodes> | --nodes=<number of nodes>\n"
+    printf "\t-s=<cluster name> | --start=<cluster name>\n"
+    printf "To delete the entire cluster use:\n"
+    printf "\t-d=<cluster name> | --delete=<cluster name>\n"
+    printf "To manage the cluster (remove single nodes, execute cql queries, etc), use ccm commands directly.\n"
 }
 
 if [ -z "$1" ]
@@ -24,15 +24,15 @@ if [ -z "$1" ]
                     ;;
                 -s=*|--start=*)
                     if [ $N_NODES != $DEFF_VALUE ]; then
-                        echo "Creating cluster..\n Name: ${arg#*=}\n Number nodes: ${N_NODES}"
+                        printf "Creating cluster..\n Name: ${arg#*=}\n Number nodes: ${N_NODES}\n"
                             ccm create ${arg#*=} -v 3.11.5 -n $N_NODES
                     else
-                        echo "Missing -n parameter"
+                        printf "Missing -n parameter\n"
                     fi
                     shift
                     ;;
                 -d=*|--delete=*)
-                        echo "Removing cluster: ${arg#*=}"
+                        printf "Removing cluster: ${arg#*=}\n"
                         ccm remove ${arg#*=}
                     shift
                     ;;
