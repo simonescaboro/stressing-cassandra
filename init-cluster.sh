@@ -26,6 +26,7 @@ if [ -z "$1" ]
                     if [ $N_NODES != $DEFF_VALUE ]; then
                         printf "Creating cluster..\n Name: ${arg#*=}\n Number nodes: ${N_NODES}\n"
                             ccm create ${arg#*=} -v 3.11.5 -n $N_NODES
+                            ccm start
                     else
                         printf "Missing -n parameter\n"
                     fi
