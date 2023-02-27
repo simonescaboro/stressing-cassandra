@@ -1,6 +1,6 @@
 # stressing-cassandra
 ## Installation
-In order to use these scripts, you have to install ccm (Cassandra Cluster Manager). A useful guide can he found [here](https://academy.datastax.com/planet-cassandra/getting-started-with-ccm-cassandra-cluster-manager).
+In order to use these scripts, you have to install ccm (Cassandra Cluster Manager). A useful guide can be found [here](https://academy.datastax.com/planet-cassandra/getting-started-with-ccm-cassandra-cluster-manager).
 After installing ccm, clone and extract this repositoy into ccm directory.
 ## Execution
 `init-cluster.sh` helps you to initialize a cluster. Use `-h`parameter to find out the necessary parameters.
